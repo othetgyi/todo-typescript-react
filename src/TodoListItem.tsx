@@ -1,6 +1,6 @@
 import React from "react";
 
-interface Todo {
+export interface Todo {
   text: string;
   complete: boolean;
 }
