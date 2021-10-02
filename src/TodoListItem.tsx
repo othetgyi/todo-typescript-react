@@ -1,12 +1,4 @@
 import React from "react";
-
-export interface Todo {
-  text: string;
-  complete: boolean;
-}
-
-export type ToggleTodo = (selectedTodo: Todo) => void;
-
 interface Props {
   todo: Todo;
   toggleTodo: ToggleTodo;
