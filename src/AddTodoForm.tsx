@@ -1,4 +1,15 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+
+const StyledButton = styled.button`
+  font-family: Arial;
+  font-size: 20px;
+`;
+
+const StyledInput = styled.input`
+  font-family: Arial;
+  font-size: 20px;
+`;
 
 interface Props {
   addTodo: AddTodo;
@@ -9,14 +20,14 @@ export const AddTodoForm: React.FC<Props> = ({ addTodo }) => {
 
   return (
     <form>
-      <input
+      <StyledInput
         type="text"
         value={text}
         onChange={(event) => {
           setText(event.target.value);
         }}
       />
-      <button
+      <StyledButton
         type="submit"
         onClick={(event) => {
           event.preventDefault();
@@ -25,7 +36,7 @@ export const AddTodoForm: React.FC<Props> = ({ addTodo }) => {
         }}
       >
         Add Todo
-      </button>
+      </StyledButton>
     </form>
   );
 };
